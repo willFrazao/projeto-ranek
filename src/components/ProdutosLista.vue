@@ -1,10 +1,11 @@
 <template>
   <section class="produtos-container">
-    <div v-if="produtos && produtos.length > 0" class="produtos">
+    <transition mode="out-in">
+    <div v-if="produtos && produtos.length > 0" class="produtos" key="produtos">
       <div class="produto" v-for="(produto, index) in produtos" :key="index">
-        <router-link to="/">
+        <router-link :to="{name: 'produto', params: {id: produto.id}}">
           <img v-if="produto.fotos" :src="produto.fotos[0].src" :alt="produto.fotos[0].titulo">
-          <p class="preco">{{ produto.preco }}</p>
+          <p class="preco">{{ produto.preco | numeroPreco }}</p>
           <h2 class="titulo">{{ produto.nome }}</h2>
           <p>{{ produto.descricao }}</p>
         </router-link>
@@ -12,9 +13,11 @@
       <ProdutosPaginar :produtosTotal="produtosTotal"
       :produtosPorPagina="produtosPorPagina"/>
   </div>
-  <div v-else-if="produtos && produtos.length === 0">
+  <div v-else-if="produtos && produtos.length === 0" key="sem-resultados">
     <p class="sem-resultados">Busca Vazia. Tente buscar outro termo.</p>
   </div>
+    <PaginaCarregando key="carregando" v-else/>
+</transition>
   </section>
 </template>
 
@@ -31,7 +34,7 @@ export default {
   data() {
     return {
       produtos: null,
-      produtosPorPagina: 3,
+      produtosPorPagina: 9,
       produtosTotal: 0,
     };
   },
@@ -49,6 +52,7 @@ export default {
   },
   methods: {
     getProdutos() {
+      this.produtos = null;
       api.get(this.url).then(response => {
         this.produtosTotal = Number(response.headers["x-total-count"]);
         this.produtos = response.data;
@@ -83,7 +87,7 @@ export default {
 }
 
 .produto:hover {
-  box-shadow: 0 4px 8px rgba(30, 60, 90, 0.2);
+  box-shadow: 0 6px 12px rgba(30, 60, 90, 0.2);
   transform: scale(1.1);
   position: relative;
   z-index: 1;
