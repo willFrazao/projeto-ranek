@@ -1,8 +1,8 @@
 {
   "usuario": [
     {
-      "id": "william@origamid.com",
-      "email": "william@origamid.com",
+      "id": "william.frazao91@gmail.com",
+      "email": "william.frazao91@gmail.com",
       "nome": "William",
       "senha": "123",
       "rua": "São Félix",
@@ -16,7 +16,7 @@
     {
       "id": "notebook",
       "nome": "Notebook",
-      "usuario_id": "william@origamid.com",
+      "usuario_id": "william.frazao91@gmail.com",
       "preco": "4999",
       "vendido": "false",
       "descricao": "Esse é um novo notebook.",
