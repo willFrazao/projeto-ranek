@@ -10,6 +10,30 @@
       "numero": "581",
       "estado": "RJ",
       "cidade": "Rio de Janeiro"
+    },
+    {
+      "id": "rod.pereira@teste.com",
+      "nome": "Rodrigo Pereira",
+      "email": "rod.pereira@teste.com",
+      "senha": "321",
+      "cep": "25930-725",
+      "rua": "Rua Onze",
+      "numero": "122",
+      "bairro": "Maurimárcia (Vila Inhomirim)",
+      "cidade": "Magé",
+      "estado": "RJ"
+    },
+    {
+      "id": "debora.fernandes0100@gmail.com",
+      "nome": "Debora Fernandes",
+      "email": "debora.fernandes0100@gmail.com",
+      "senha": "789",
+      "cep": "25260107",
+      "rua": "Rua São Félix",
+      "numero": "581",
+      "bairro": "Vila Santa Cruz",
+      "cidade": "Duque de Caxias",
+      "estado": "RJ"
     }
   ],
   "produto": [
