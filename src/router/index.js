@@ -1,40 +1,65 @@
-import Vue from 'vue'
-import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
-import ProdutoView from '../views/ProdutoView.vue'
-import LoginView from '../views/LoginView.vue'
-import UsuarioView from '../views/usuario/UsuarioView.vue'
+import Vue from "vue";
+import VueRouter from "vue-router";
+import HomeView from "../views/HomeView.vue";
+import ProdutoView from "../views/ProdutoView.vue";
+import LoginView from "../views/LoginView.vue";
+import UsuarioView from "../views/usuario/UsuarioView.vue";
+import UsuarioProdutosView from "../views/usuario/UsuarioProdutosView.vue";
+import UsuarioComprasView from "../views/usuario/UsuarioComprasView.vue";
+import UsuarioVendasView from "../views/usuario/UsuarioVendasView.vue";
+import UsuarioEditarView from "../views/usuario/UsuarioEditarView.vue";
 
-Vue.use(VueRouter)
+Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
-    name: 'home',
-    component: HomeView
+    path: "/",
+    name: "home",
+    component: HomeView,
   },
   {
     path: "/produto/:id",
     name: "produto",
     component: ProdutoView,
-    props: true
+    props: true,
   },
   {
     path: "/login",
     name: "login",
-    component: LoginView
+    component: LoginView,
   },
   {
     path: "/usuario",
-    name: "usuario",
-    component: UsuarioView
+    component: UsuarioView,
+    children: [
+      {
+        path: "",
+        name: "usuario",
+        component: UsuarioProdutosView,
+      },
+      {
+        path: "compras",
+        name: "compras",
+        component: UsuarioComprasView,
+      },
+      {
+        path: "vendas",
+        name: "vendas",
+        component: UsuarioVendasView,
+      },
+      {
+        path: "editar",
+        name: "usuario-editar",
+        component: UsuarioEditarView,
+      },
+    ],
   },
-]
+];
 
 const router = new VueRouter({
-  mode: 'history',
+  mode: "history",
   base: process.env.BASE_URL,
-  routes
+  routes,
 });
 
 router.beforeEach((to, from, next) => {
@@ -42,4 +67,4 @@ router.beforeEach((to, from, next) => {
   next();
 });
 
-export default router
+export default router;
