@@ -360,6 +360,22 @@
       "vendido": "false",
       "descricao": "Esse é um novo Pense.",
       "fotos": null
+    },
+    {
+      "nome": "playstation",
+      "preco": "5500",
+      "descricao": "play 5.",
+      "fotos": null,
+      "usuario_id": "william.frazao91@gmail.com",
+      "id": "dEgonNg"
+    },
+    {
+      "nome": "max steal",
+      "preco": "10",
+      "descricao": "boneco",
+      "fotos": null,
+      "usuario_id": "william.frazao91@gmail.com",
+      "id": "SynP-LY"
     }
   ]
 }
