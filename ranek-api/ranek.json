@@ -38,15 +38,6 @@
   ],
   "produto": [
     {
-      "id": "notebook",
-      "nome": "Notebook",
-      "usuario_id": "william.frazao91@gmail.com",
-      "preco": "4999",
-      "vendido": "false",
-      "descricao": "Esse é um novo notebook.",
-      "fotos": null
-    },
-    {
       "id": "smartphone",
       "nome": "Smartphone",
       "usuario_id": "william@origamid.com",
@@ -360,14 +351,6 @@
       "vendido": "false",
       "descricao": "Esse é um novo Pense.",
       "fotos": null
-    },
-    {
-      "nome": "playstation",
-      "preco": "5500",
-      "descricao": "play 5.",
-      "fotos": null,
-      "usuario_id": "william.frazao91@gmail.com",
-      "id": "dEgonNg"
     },
     {
       "nome": "max steal",
@@ -376,6 +359,14 @@
       "fotos": null,
       "usuario_id": "william.frazao91@gmail.com",
       "id": "SynP-LY"
+    },
+    {
+      "nome": "skate",
+      "preco": "7",
+      "descricao": "skate zero",
+      "fotos": null,
+      "usuario_id": "william.frazao91@gmail.com",
+      "id": "84oIkJT"
     }
   ]
 }
