@@ -2,14 +2,15 @@
   "usuario": [
     {
       "id": "william.frazao91@gmail.com",
-      "email": "william.frazao91@gmail.com",
       "nome": "William",
+      "email": "william.frazao91@gmail.com",
       "senha": "123",
-      "rua": "São Félix",
       "cep": "25260107",
-      "numero": "581",
-      "estado": "RJ",
-      "cidade": "Rio de Janeiro"
+      "rua": "São Félix",
+      "numero": "666",
+      "bairro": "piabeta",
+      "cidade": "Rio de Janeiro",
+      "estado": "RJ"
     },
     {
       "id": "rod.pereira@teste.com",
