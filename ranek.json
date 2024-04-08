@@ -103,6 +103,18 @@
       "bairro": "Vila Santa Cruz",
       "cidade": "Duque de Caxias",
       "estado": "RJ"
+    },
+    {
+      "id": "william@origamid.com",
+      "nome": "willnito",
+      "email": "william@origamid.com",
+      "senha": "4321",
+      "cep": "25930-725",
+      "rua": "Rua Onze",
+      "numero": "324",
+      "bairro": "Maurimárcia (Vila Inhomirim)",
+      "cidade": "Magé",
+      "estado": "RJ"
     }
   ],
   "produto": [
